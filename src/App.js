@@ -50,26 +50,21 @@ this.setState({
 render(){
   return (
     <div>
-<div className="wrapper">
- <div className="main">
-  <div className="container">
-   <div className="row">
-    <div className="col-xs-5 title-container">
-      <Titles />
-    </div>
-    <div className="col-xs-7 form-container">
+    <section class="titles" id="titles">
+    <Titles />
+    </section>
+     
+ <section class="form" id="form">
        <Form getWeather={this.getWeather}/>
+      
+
        <Weather temp={this.state.temp}
          city={this.state.city}
          country={this.state.country}
          humid={this.state.humid}
          description={this.state.description}
          error={this.state.error}/>
-    </div>
-   </div>
-  </div>
- </div>
-</div>
+     </section>
     </div>
   );
 }
